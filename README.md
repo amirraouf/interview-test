@@ -19,3 +19,22 @@ contents of the messages are to be saved to files by design and will not change 
 - Given that the initial iteration is using local files, consider implementing a file handler that will grow with the application
 and work with cloud services in the future.
 - How should the application handle concurrency? What changes to the database model needs to happen?
+
+
+## Usage:
+For creating users
+```bash
+curl -X post http://127.0.0.1:5000/user --header 'Content-Type: application/json' -d '{"username":"amir"}'
+```
+For creating message
+```bash
+curl -X post http://127.0.0.1:5000/messages --header 'Content-Type: application/json' -d '{"message_content":"mariam3"}'
+```
+for getting next message
+```bash
+`curl -X get http://127.0.0.1:5000/next_message
+```
+for editing message
+```bash
+curl -X put http://127.0.0.1:5000/edit/1/5 --header 'Content-Type: application/json' -d '{"username":"amir3"}'
+```

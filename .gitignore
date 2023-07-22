@@ -4,14 +4,13 @@
 *.pyc
 config.py
 .env*
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
 # Pycharm workspace file
-.idea/workspace.xml
+.idea/*
 
 # C extensions
 *.so
@@ -124,7 +123,7 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
-
+messages/*
 # Environments
 .env
 .venv
