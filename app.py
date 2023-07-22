@@ -124,7 +124,7 @@ def edit_message(db, message_id, content, assignee_id) -> Result[Message, None]:
     message = db.session.query(Message).\
         with_for_update(of=Message, nowait=True, skip_locked=True). \
         filter(Message.id == message_id).first()
-    __import__('ipdb').set_trace()
+
     #TODO: the next block should be atomic
     file_handler = FileHandler(message.file_path)
     file_handler.edit_content(content)
